@@ -30,13 +30,16 @@
 			<value>com.mysql.jdbc.Driver</value>
 		</property>
 		<property name="url">
+<!-- 			<value>jdbc:mysql://sqld.duapp.com:4050/fcmpBmSTGfkidmNbENeu</value> -->
 			<value>jdbc:mysql://localhost:3306/demo</value>
 		</property>
                 
 		<property name="username">
-			<value>root</value>
+<!-- 			<value>BGbNHDOQNmr5QroETMQWY1hg</value> -->
+				<value>root</value>
 		</property>
 		<property name="password">
+<!-- 			<value>5r7OghGkZZO3gUweeofFFmwTjatZ16dk</value> -->
 			<value>123456</value>
 		</property>
 	</bean>	

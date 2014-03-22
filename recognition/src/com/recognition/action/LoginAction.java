@@ -37,6 +37,7 @@ public class LoginAction extends ActionSupport {
 		}
 	}
 
+	@JSON(serialize=false)
 	public LoginService getLoginService() {
 		return loginService;
 	}

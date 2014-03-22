@@ -8,14 +8,14 @@
 			$("#btn").click(function(){
 				var params = $("#login").serialize();
 				$.post('login.action', params,function(data){
-						alert(data);
+						alert(data.loginRs);
 					}
 				);
 			});
 			
 			$("#btn1").click(function(){
 				$.post('test.action', '',function(data){
-						alert(data);
+						alert(data.jsonString);
 					}
 				);
 			});
