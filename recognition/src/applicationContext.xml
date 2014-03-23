@@ -22,6 +22,8 @@
 			<list>
 				<value>com/recognition/entity/Administrator.hbm.xml</value>
 				<value>com/recognition/entity/User.hbm.xml</value>
+				<value>com/recognition/entity/Department.hbm.xml</value>
+				<value>com/recognition/entity/Signature.hbm.xml</value>
 			</list>
 		</property>
  	</bean>

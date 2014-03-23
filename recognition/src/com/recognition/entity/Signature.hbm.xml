@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.recognition.entity.Signature" table="signature">
+        <property name="uid" type="java.lang.Integer">
+            <column name="uid" not-null="true"/>
+        </property>
+        <property name="getdate" type="java.sql.Date">
+            <column name="getdate" not-null="false" />
+        </property>
+        <property name="putdate" type="java.sql.Date">
+            <column name="putdate" not-null="false" />
+        </property>
+        <property name="process" type="java.lang.String">
+            <column name="getdate" not-null="false" />
+        </property>
+        <property name="identify" type="java.lang.Integer">
+            <column name="identify" not-null="false" />
+        </property>
+    </class>
+</hibernate-mapping>
