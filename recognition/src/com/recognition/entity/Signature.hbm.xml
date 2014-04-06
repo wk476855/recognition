@@ -3,20 +3,34 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class name="com.recognition.entity.Signature" table="signature">
-        <property name="uid" type="java.lang.Integer">
-            <column name="uid" not-null="true"/>
-        </property>
-        <property name="getdate" type="java.sql.Date">
+        <id name="sid" type="java.lang.Integer">
+            <column name="sid"/>
+            <generator class="identity" />
+        </id>
+        
+        <property name="getdate" type="java.sql.Timestamp">
             <column name="getdate" not-null="false" />
         </property>
-        <property name="putdate" type="java.sql.Date">
+        
+        <property name="putdate" type="java.sql.Timestamp">
             <column name="putdate" not-null="false" />
         </property>
+        
         <property name="process" type="java.lang.String">
-            <column name="getdate" not-null="false" />
+            <column name="process" not-null="false" />
         </property>
+        
         <property name="identify" type="java.lang.Integer">
             <column name="identify" not-null="false" />
         </property>
+        
+        <property name="longitude" type="java.lang.Double">
+            <column name="longitude" not-null="false" />
+        </property>
+        
+        <property name="latitude" type="java.lang.Double">
+            <column name="latitude" not-null="false" />
+        </property>
+        
     </class>
 </hibernate-mapping>

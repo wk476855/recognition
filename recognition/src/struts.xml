@@ -20,6 +20,23 @@
 		<action name="login" class="com.recognition.action.LoginAction">
 			<result type="json" />
 		</action>
+		
+		<action name="getAllDepartment" class="com.recognition.action.GetDepartmentAction">
+			<result type="json" />
+		</action>
+		
+		<action name="register" class="com.recognition.action.RegisterAction">
+			<result type="json" />
+		</action>
+		
+		<action name="sign" class="com.recognition.action.SignatureAction">
+			<result type="json" />
+		</action>
+    
+    	<action name="requestSignature" class="com.recognition.action.RequestSignatureAction">
+    		<result type="json" />
+    	</action>
+    	
     </package>
 
 </struts>

@@ -1,13 +1,14 @@
 package com.recognition.entity;
 
 import java.util.List;
+import java.util.Set;
 
 public class Administrator {
 
 	private String loginName;	
-	private String name;
+	private String realName;
 	private String password;
-//	private List<User> userList;
+	private List<User> userList;
 	
 
 	public String getPassword() {
@@ -18,21 +19,7 @@ public class Administrator {
 		this.password = password;
 	}
 
-//	public List<User> getUserList() {
-//		return userList;
-//	}
-//
-//	public void setUserList(List<User> userList) {
-//		this.userList = userList;
-//	}
 
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
 
 	public String getLoginName() {
 		return loginName;
@@ -40,6 +27,22 @@ public class Administrator {
 
 	public void setLoginName(String loginName) {
 		this.loginName = loginName;
+	}
+
+	public String getRealName() {
+		return realName;
+	}
+
+	public void setRealName(String realName) {
+		this.realName = realName;
+	}
+
+	public List<User> getUserList() {
+		return userList;
+	}
+
+	public void setUserList(List<User> userList) {
+		this.userList = userList;
 	}
 
 

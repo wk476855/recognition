@@ -3,9 +3,16 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class name="com.recognition.entity.Department" table="department">
-        <id name="name" type="java.lang.String">
-            <column name="name"/>
+        <id name="departName" type="java.lang.String">
+            <column name="departName"/>
 <!--             <generator class="identity" /> -->
         </id>
+        
+        <list name="userList" inverse="false" lazy="false">
+        	<key column="departName"></key>
+        	<index column="uid" />
+        	<one-to-many class="com.recognition.entity.User" />
+        </list>
+        
     </class>
 </hibernate-mapping>

@@ -1,15 +1,28 @@
 package com.recognition.entity;
 
-public class Department {
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
-	private String name;
+public class Department implements Serializable{
 
-	public String getName() {
-		return name;
+	private String departName;
+	private List<User> userList;
+
+	public List<User> getUserList() {
+		return userList;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setUserList(List<User> userList) {
+		this.userList = userList;
+	}
+
+	public String getDepartName() {
+		return departName;
+	}
+
+	public void setDepartName(String departName) {
+		this.departName = departName;
 	}
 	
 }

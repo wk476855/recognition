@@ -7,11 +7,17 @@
             <column name="loginName"/>
 <!--             <generator class="identity" /> -->
         </id>
-        <property name="name" type="java.lang.String">
-            <column name="name" length="100" not-null="false" />
+        <property name="realName" type="java.lang.String">
+            <column name="realName" length="100" not-null="false" />
         </property>
         <property name="password" type="java.lang.String">
             <column name="password" length="100" not-null="false" />
         </property>
+        
+        <list name="userList" inverse="false" lazy="false">
+        	<key column="loginName"></key>
+        	<index column="uid" />
+        	<one-to-many class="com.recognition.entity.User" />
+        </list>
     </class>
 </hibernate-mapping>

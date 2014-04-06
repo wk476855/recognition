@@ -56,4 +56,42 @@
     	<property name="loginService" ref="loginService" />
     </bean>
     
+    <bean id="departmentDAO" class="com.recognition.daoImpl.DepartmentDAOImpl">
+    	<property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+   
+   <bean id="userDAO" class="com.recognition.daoImpl.UserDAOImpl">
+    	<property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+    
+    <bean id="registerService" class="com.recognition.serviceImpl.RegisterServiceImpl">
+    	<property name="departmentDAO" ref="departmentDAO" />
+    	<property name="userDAO" ref="userDAO" />
+    </bean>
+    
+    <bean id="getDepartmentAction" class="com.recognition.action.GetDepartmentAction">
+    	<property name="registerService" ref="registerService" />
+    </bean>
+    
+    <bean id="registerAction" class="com.recognition.action.RegisterAction">
+    	<property name="registerService" ref="registerService" />
+    </bean>
+    
+    <bean id="signatureDAO" class="com.recognition.daoImpl.SignatureDAOImpl">
+    	<property name="sessionFactory" ref="sessionFactory" />
+    </bean> 
+    
+    <bean id="signatureService" class="com.recognition.serviceImpl.SignatureServiceImpl">
+    	<property name="signatureDAO" ref="signatureDAO" />
+    	<property name="userDAO" ref="userDAO" />
+    </bean>
+    
+    <bean id="signatureAction" class="com.recognition.action.SignatureAction">
+    	<property name="signatureService" ref="signatureService" />
+    </bean>
+    
+    <bean id="requestSignatureAction" class="com.recognition.action.RequestSignatureAction">
+    	<property name="signatureService" ref="signatureService" />
+    </bean>
+    
 </beans>

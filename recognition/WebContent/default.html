@@ -6,17 +6,11 @@
 	<script src="js/jquery.js"></script> 
 	<script>
 		$(document).ready(function(){
-			$("#btn").click(function(){
-				var params = $("#login").serialize();
-				$.post('login.action', params,function(data){
-						alert(data.loginRs);
-					}
-				);
-			});
-			
+					
 			$("#btn1").click(function(){
-				$.post('test.action', '',function(data){
-						alert(data.jsonString);
+				var params =$('#request').serialize();
+				$.post('requestSignature.action', params, function(data){
+						alert(data.requestRs);
 					}
 				);
 			});
@@ -26,11 +20,12 @@
 </head>
 
 <body>
-	<form id="login">
-		<label>用户名:</label><input type="text" name="loginName"><br><br>
-		<label>密&nbsp;码：</label><input type="password" name="password"><br><br>
+
+	<form id="request">
+		<input type="text" name="phone" value="15601862010" style="visibility:hidden">
 	</form>
-	<button id="btn">登录</button><button id="btn1">测试</button>
+	<button id="btn1">发送签到请求</button>
+	<a href="uploadlist.jsp">查看上传文件</a>
 </body>
 </html>
 

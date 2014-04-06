@@ -45,7 +45,8 @@ public class LoginAction extends ActionSupport {
 	public void setLoginService(LoginService loginService) {
 		this.loginService = loginService;
 	}
-
+	
+	@JSON(serialize=false)
 	public String getLoginName() {
 		return loginName;
 	}
@@ -54,6 +55,7 @@ public class LoginAction extends ActionSupport {
 		this.loginName = loginName;
 	}
 
+	@JSON(serialize=false)
 	public String getPassword() {
 		return password;
 	}
